@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SKY</title>
+  <link rel="icon" href="/images/favicon-enhanced.png">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="/images/favicon-enhanced.png" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="stylesheet" text="text/CSS"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" text="text/CSS"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<style>
+  html {
+    scroll-behavior: smooth;
+
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
+
+  .back-top-wrap {
+    position: fixed;
+    bottom: 5rem;
+    right: 1rem;
+    background-color: #80F7D1;
+    padding: 1rem 1.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    z-index: 100;
+  }
+
+  .back-top-wrap:hover {
+    background-color: rgb(168, 136, 181);
+    color: #80F7D1;
+  }
+
+  .back-top-wrap:hover .fas.fa-arrow-up {
+    color: white;
+  }
+
+  .fas.fa-arrow-up {
+    color: #00488F;
+    transition: 0.3s ease-in-out;
+  }
+  .cont {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+  }
+
+  .car {
+    width: 100%;
+    max-width: 300px;
+    background: black;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+
+  .car-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .car-title {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+  .car-line {
+    width: 40px;
+    height: 2px;
+    background: black;
+    margin: 0 auto 12px auto;
+  }
+
+  .car-text {
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+
+  /* Make it stack on small screens */
+  @media (max-width: 768px) {
+    .cont {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+
+</style>
+
+<body onload="myFunction()">
+  <div class="loading-wrapper">
+    <img src="" id="loading" />
+  </div>
+
+  <!-- Back to top button -->
+  <div id="back-top-div" class="back-top-wrap">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+  <header>
+    <nav class="nav" id="nav">
+      <div>
+        <a class="navbar-brand" href="#!"> <img src="./images/logo.png" alt="Logo" class="logo" /></a>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <ul class="links" id="navmenu">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#services">SERVICES </a></li>
+          <li><a href="html/contact.html">CONTACT US </a></li>
+        </ul>
+      </div>
+      <button class="login-button"><a href="html/login.html">Login/SignUp</a></button>
+      <div class="hamburger" id="ham">
+        <i class="cancel fa-solid fa-xmark"></i>
+
+        <svg class="burger" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z">
+          </path>
+        </svg>
+      </div>
+    </nav>
+    <div class="menu" id="menu">
+      <ul class="menu-link">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICES </a></li>
+        <li><a href="html/contact.html">CONTACT US </a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <h1>SKY WELCOMES YOU</h1>
+      <div class="container">
+        <h3><span class="auto-type" style="font-size: 30px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"></a></span></h3>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+      <script>
+        var typed = new Typed(".auto-type", {
+          strings: ["The mind whispers to the body every day. Make sure it's telling a story worth living"],
+          typeSpeed: 60,
+          backspeed: 50,
+          loop: true
+        })
+      </script>
+      <a href="#services" class="rainbow-button" alt="View It"></a>
+    </div>
+
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h1 data-aos="flip-right">About Us</h1>
+    <div class="max-width">
+      <div data-aos="zoom-in" class="photo"><img src="./images/about.png" alt="" height="300px" width="330px"></div>
+      <div class="about-content">
+        <p data-aos="fade-left" class="text-1">Welcome to our platform — a complete destination for both  <span>mental wellness and physical health diagnosis</span>.We believe that a healthy mind and a healthy body go hand in hand. That’s why we have created a space that supports stress management and early detection of health issues.</p>
+        <p data-aos="fade-left" class="text-3"> We offer mental wellness services like reading therapy, relaxation music, and guided yoga to help you manage stress and find inner peace. Alongside, our smart diagnosis tool analyzes symptoms to detect conditions like lung and heart diseases early. Our goal is to make <span>healthcare accessible, supportive, and personalized</span> — helping you take a step toward a healthier mind and body, all in one place.                         
+        
+        </p>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- Relaxation Section -->
+  <section id="services">
+    <h1>Relax Yourself</h1>
+    <div data-aos="zoom-in" data-aos-duration="800" class="container">
+      <div class="responsive audio">
+        <div class="round-image">
+          <img src="./images/audio.png" alt="audio" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Audio Therapy</h2>
+          <p>
+            Let the waves of sound wash away your worries.
+          </p>
+          <a href="html/audioTherapy.html">
+            Let's Explore
+          </a>
+        </div>
+      </div>
+      
+      <div data-aos="zoom-in" data-aos-duration="800" class="responsive yoga">
+        <div class="round-image">
+          <img src="./images/yoga.png" alt="yoga" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Yoga Therapy</h2>
+          <p>
+            Find balance, strength, and inner peace through every breath and movement
+          </p>
+          <a href="html/yogatherapy.html">
+            Let's Explore
+          </a>
+        </div>
+      </div>
+      <div data-aos="zoom-in" data-aos-duration="800" class="responsive laugh">
+        <div class="round-image">
+          <img src="./images/laughing.png" alt="laughing" />
+        </div>
+        <div class="description">
+          <h2>Laughing Therapy</h2>
+          <p>
+            In every laugh, find a little more light and a lot more healing
+          </p>
+          <a href="html/laughTherapy.html">
+            Let's Explore
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h1 data-aos="flip-right">Our Services</h1>
+    <div class="max-width">
+      
+      <div class="about-content">
+                         
+        <div class="cont">
+          <div class="car">
+            <div class="car-icon">🌎</div>
+            <div class="car-title">Better Accessibility</div>
+            <div class="car-line"></div>
+            <div class="car-text">Our technology helps bring healthcare services to remote villages and underdeveloped regions where hospitals and doctors are hard to reach.</div>
+          </div>
+      
+          <div class="car">
+            <div class="car-icon">⚙️</div>
+            <div class="car-title">Early Detection</div>
+            <div class="car-line"></div>
+            <div class="car-text">Assists in identifying diseases at an initial stage, significantly improving the chances of successful treatment.</div>
+          </div>
+      
+          <div class="car">
+            <div class="car-icon">💲</div>
+            <div class="car-title">Cost Reduction</div>
+            <div class="car-line"></div>
+            <div class="car-text">lessens the workload of healthcare professionals and reduces the need for costly medical tests and procedures.</div>
+          </div>
+      
+          <div class="car">
+            <div class="car-icon">❤️</div>
+            <div class="car-title">High Accuracy</div>
+            <div class="car-line"></div>
+            <div class="car-text">We leverage top-tier machine learning models to provide highly precise and reliable predictions.</div>
+          </div>
+      
+          <div class="car">
+            <div class="car-icon">🏥</div>
+            <div class="car-title">Faster Predictions</div>
+            <div class="car-line"></div>
+            <div class="car-text">With our app, users simply input a few details and receive their diagnosis within seconds.</div>
+          </div>
+      
+          <div class="car">
+            <div class="car-icon">✔️</div>
+            <div class="car-title">Elimination of Human Errors</div>
+            <div class="car-line"></div>
+            <div class="car-text">Automating medical processes with AI greatly decreases human involvement, minimizing the risk of errors.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+  <!-- Service Section -->
+  <section id="services">
+    <h1>Our Models</h1>
+    <div data-aos="zoom-in" data-aos-duration="800" class="container">
+      <div class="responsive audio">
+        <div class="round-image">
+          <img src="./images/theliver1.png" alt="audio" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Liver Disease Prediction</h2>
+          <p>
+            Let the waves of sound wash away your worries.
+          </p>
+          <a href="./disease/liver_index.html">
+            Let's Explore
+          </a>
+        </div>
+      </div>
+      <div data-aos="zoom-in" data-aos-duration="800" class="responsive reading">
+        <div class="round-image">
+          <img src="./images/Pneumonia.jpg" alt="read" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Pneumonia Disease Prediction</h2>
+          <p>
+            Let the power of words guide you back to yourself.
+          </p>
+          <a href="./disease/pneumonia_index.html">
+            Let's Explore
+          </a>
+        </div>
+      </div>
+      <div data-aos="zoom-in" data-aos-duration="800" class="responsive yoga">
+        <div class="round-image">
+          <img src="./images/kindey.jpg" alt="yoga" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Kidney Disease Prediction</h2>
+          <p>
+            Find balance, strength, and inner peace through every breath and movement
+          </p>
+          <a href="./disease/kidney_index.html">
+            Let's Explore
+          </a>
+        </div>
+      </div>
+      <div data-aos="zoom-in" data-aos-duration="800" class="responsive laugh">
+        <div class="round-image">
+          <img src="./images/diabetes.jpg" alt="laughing" />
+        </div>
+        <div class="description">
+          <h2>Diabetes Prediction</h2>
+          <p>
+            In every laugh, find a little more light and a lot more healing
+          </p>
+          <a href="./disease/diabete_index.html">
+            Let's Explore
+          </a>
+        </div>
+      </div>
+      <div data-aos="zoom-in" data-aos-duration="800" class="responsive laugh">
+        <div class="round-image">
+          <img src="./images/stroke.png" alt="laughing" />
+        </div>
+        <div class="description">
+          <h2>Stroke Prediction</h2>
+          <p>
+            In every laugh, find a little more light and a lot more healing
+          </p>
+          <a href="./disease/stroke_index.html">
+            Let's Explore
+          </a>
+        </div>
+      </div>
+      <div data-aos="zoom-in" data-aos-duration="800" class="responsive laugh">
+        <div class="round-image">
+          <img src="./images/heart.jpg" alt="laughing" />
+        </div>
+        <div class="description">
+          <h2>Heart Disease Prediction</h2>
+          <p>
+            In every laugh, find a little more light and a lot more healing
+          </p>
+          <a href="./disease/heart_index.html">
+            Let's Explore
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  
+  <!-- Faq section -->
+  <section class="faq">
+    <div class="faq_heading">
+      <h1>Frequently Asked Questions</h1>
+    </div>
+    <div class="accordion">
+      <div class="accordion__item">
+        <button class="accordion__btn">
+
+          <span class="accordion__caption"><i class="far fa-lightbulb"></i>Who are we and what do we do?</span>
+          <span class="accordion__icon"><i class="fa fa-plus"></i></span>
+        </button>
+
+        <div class="accordion__content">
+          <p>We are team SKY of open source contributors who have created to solve real life problems like stress and the diseases. We aim to help one to achieve a stress free and disease free life.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion__item">
+        <button class="accordion__btn">
+
+          <span class="accordion__caption"><i class="far fa-lightbulb"></i>What are the therapy and services we offer?</span>
+          <span class="accordion__icon"><i class="fa fa-plus"></i></span>
+        </button>
+
+        <div class="accordion__content">
+          <p>We offer multiple services like:
+            <br>
+            1. Audio Therapy
+            <br>
+            2. Yoga Therapy
+            <br>
+            3. Laughing Therapy
+            <br>
+            4. Liver Disease Prediction
+            <br>
+            5. Pneumonia Disease Prediction
+            <br>
+            6. Kidney Disease Prediction 
+            <br>
+            7. Diabetes Prediction
+            <br>
+            8. Stroke Prediction
+            <br>
+            9. Heart Disease Prediction
+          </p>
+        </div>
+      </div>
+
+
+      <div class="accordion__item">
+        <button class="accordion__btn">
+
+          <span class="accordion__caption"><i class="far fa-lightbulb"></i>What is Audio Therapy?</span>
+          <span class="accordion__icon"><i class="fa fa-plus"></i></span>
+        </button>
+
+        <div class="accordion__content">
+          <p>A healing technique that uses sound — like music, nature sounds, or specific frequencies to improve emotional, mental, and physical well-being. It helps reduce stress, ease anxiety, improve sleep, and promote relaxation by calming the mind and body through sound vibrations.</p>
+
+        </div>
+      </div>
+
+      <div class="accordion__item">
+        <button class="accordion__btn">
+
+          <span class="accordion__caption"><i class="far fa-lightbulb"></i>What is Yoga Therapy?</span>
+          <span class="accordion__icon"><i class="fa fa-plus"></i></span>
+        </button>
+
+        <div class="accordion__content">
+          <p>A healing practice that uses yoga poses, breathing exercises, and meditation techniques to support physical, mental, and emotional health. It is personalized to help manage or heal specific conditions like stress, anxiety, pain, or chronic illnesses.</p>
+        </div>
+      </div>
+
+      <div class="accordion__item">
+        <button class="accordion__btn">
+
+          <span class="accordion__caption"><i class="far fa-lightbulb"></i>What is Laughing Therapy?</span>
+          <span class="accordion__icon"><i class="fa fa-plus"></i></span>
+        </button>
+
+        <div class="accordion__content">
+          <p>A healing method that uses intentional laughter to boost mood, reduce stress, and improve overall health. Even if laughter starts as an exercise, it quickly becomes genuine, releasing feel-good chemicals in the brain and helping the body relax and heal.</p>
+        </div>
+      </div>
+
+      
+    </div>
+    </div>
+  </section>
+
+  <!-- footer start -->
+  <footer>
+    <div class="footer-container">
+      <!--logo and info column-->
+      <div class="col">
+        <!--logo insert-->
+        <img src="./images/logo.png" alt="logo" class="footlogo" />
+        <div class="footercontent">
+          
+          <p class="footerpara">Live Free, Be Happy</p>
+        </div>
+      </div>
+
+      <!--ADDRESS COLUMN-->
+
+      <div class="footer-side-col">
+
+        <!--HOME COLUMN-->
+        <div class="col">
+          <h3>HOME</h3>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+          </ul>
+          <ul>
+            <li><a href="#services">Services</a></li>
+          </ul>
+          <ul>
+            <li><a href="./html/contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <!--OUR SERVICES COLUMN-->
+        <div class="col">
+          <h3>
+            SERVICES
+            <div class="underline"><span></span></div>
+          </h3>
+          <ul>
+            <li>
+              <a href="./html/audioTherapy.html">Audio Therapy</a>
+            </li>
+            <li>
+              <a href="./html/yogatherapy.html">Yoga Therapy</a>
+            </li>
+            <li>
+              <a href="./html/laughTherapy.html">Laughing Therapy</a>
+            </li>
+            <li>
+              <a href="./disease/liver_index.html">Liver Disease Prediction</a>
+            </li>
+            <li>
+              <a href="./disease/pneumonia_index.html">Pneumonia Disease Prediction</a>
+            </li>
+            <li>
+              <a href="./disease/kidney_index.html">Kidney Disease Prediction</a>
+            </li>
+            <li>
+              <a href="./disease/diabete_index.html">Diabetes Prediction</a>
+            </li>
+            <li>
+              <a href="./disease/stroke_index.html">Stroke Prediction</a>
+            </li>
+            <li>
+              <a href="./disease/heart_index.html">Heart Disease Prediction</a>
+            </li>
+          </ul>
+        </div>
+        <!--CONTACTS COLUMN-->
+        <div class="col">
+          <h3>
+            CONTACTS
+            <div class="underline"><span></span></div>
+          </h3>
+          <div class="social-menu">
+            <ul>
+              <a href="https://x.com/" target="_blank">
+                <li id="social-twitter"><i class="fab fa-2x fa-twitter"></i></li>
+              </a>
+              <a href="https://github.com/KuhuV30/I-SKY-U" target="_blank">
+                <li id="social-github"><i class="fab fa-2x fa-github"></i></li>
+              </a>
+              <a href="https://in.linkedin.com/" target="_blank">
+                <li id="social-linkedin"><i class="fab fa-2x fa-linkedin-in"></i></li>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+
+    let preloader = document.querySelector(".loading-wrapper");
+    function myFunction() {
+      preloader.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    let navbar = document.querySelector("#nav");
+    let navmenu = document.querySelector("#navmenu");
+
+    window.onscroll = function () {
+      if (window.pageYOffset >= navmenu.offsetTop) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    };
+
+    window.onscroll = () => {
+      if (window.scrollY > 100) {
+        navbar.classList.add('nav-active');
+      } else {
+        navbar.classList.remove('nav-active');
+      }
+    };
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./serviceworker.js')
+          .then((reg) => console.log('Success', reg.scope))
+          .catch((err) => console.log('Error', err))
+      })
+    }
+  </script>
+  <script src="js/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

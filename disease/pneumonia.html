@@ -1,0 +1,83 @@
+{% extends "disease_page.html" %}
+{% block page %}
+
+<style>
+/* Centered form in a neat box */
+.form-box {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px 40px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+/* Input styling */
+.form-box input[type="file"] {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Image styling */
+#output-image {
+    max-width: 500px;
+    max-height: 450px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Predict button styling */
+.form-box button {
+    margin-top: 30px;
+    padding: 10px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+h3 {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+</style>
+
+<br><br><br>
+
+<div class="container">
+  <div class="form-box">
+    <h3>Pneumonia Disease Prediction</h3>
+
+    <form action="{{ url_for('prediction.upload_file')}}" method="POST" enctype="multipart/form-data">
+      
+      <div class="form-group">
+        <h5>Upload your Chest X-Ray Image:</h5>
+        <input class="form-control" name="file" type="file" id="formFile" onchange="preview_image(event)" required>
+      </div>
+
+      <img id="output-image" class="rounded mx-auto d-block" src="{{ url_for('prediction.send_file', filename=file_name)}}" onerror="this.src='./static/images/upload.png'" />
+      
+      <p style="font-style: italic; margin-top: 10px;">{{ file_name }}</p>
+
+      <button type="submit" class="btn btn-success">Predict</button>
+
+    </form>
+  </div>
+</div>
+
+<br><br><br>
+
+<script type="text/javascript">
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      var output = document.getElementById('output-image');
+      output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+  }
+</script>
+
+<hr>
+
+{% endblock %}

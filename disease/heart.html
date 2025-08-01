@@ -1,0 +1,139 @@
+{% extends "disease_page.html" %}
+{% block page %}
+
+<style>
+/* Style for the square centered box */
+.form-box {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 40px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+/* Style the labels and inputs */
+.form-box label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.form-box input, 
+.form-box select {
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* Style the submit button */
+.form-box button {
+    margin-top: 25px;
+    padding: 10px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+h3 {
+    margin-bottom: 20px;
+}
+
+hr {
+    border-top: 2px solid #ccc;
+}
+</style>
+
+<br><br><br>
+
+<div class="container">
+  <div class="form-box">
+    <form action="/predict" method="POST">
+      <h3>Enter the Following Parameters</h3>
+      <hr>
+
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input class="form-control" type="number" min="0" name="age" required placeholder="Age">
+      </div>
+
+      <div class="form-group">
+        <label for="Gender">Gender</label>
+        <select class="form-control" id="Gender" name="Gender" required>
+          <option value="1">Male</option>
+          <option value="0">Female</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="cp">Chest Pain Type</label>
+        <select class="form-control" id="cp" name="cp" required>
+          <option value="0">Typical Angina</option>
+          <option value="1">Atypical Angina</option>
+          <option value="2">Non-Anginal Pain</option>
+          <option value="3">Asymptomatic</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="trestbps">Resting Blood Pressure (in mm Hg)</label>
+        <input class="form-control" type="number" min="0" id="trestbps" name="trestbps" required placeholder="Resting Blood Pressure">
+      </div>
+
+      <div class="form-group">
+        <label for="chol">Serum Cholesterol (mg/dl)</label>
+        <input class="form-control" type="number" min="0" step="any" id="chol" name="chol" required placeholder="Serum Cholesterol">
+      </div>
+
+      <div class="form-group">
+        <label for="fbs">Fasting Blood Sugar > 120 mg/dl</label>
+        <select class="form-control" id="fbs" name="fbs" required>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="restecg">Resting ECG Results</label>
+        <select class="form-control" id="restecg" name="restecg" required>
+          <option value="0">Normal</option>
+          <option value="1">Having ST-T wave abnormality</option>
+          <option value="2">Probable or definite left ventricular hypertrophy</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="thalach">Maximum Heart Rate Achieved</label>
+        <input class="form-control" type="number" min="0" step="any" id="thalach" name="thalach" required>
+      </div>
+
+      <div class="form-group">
+        <label for="exang">Exercise Induced Angina</label>
+        <select class="form-control" id="exang" name="exang" required>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="oldpeak">ST Depression (Oldpeak)</label>
+        <input class="form-control" type="number" min="0" step="any" id="oldpeak" name="oldpeak" required placeholder="Oldpeak">
+      </div>
+
+      <div class="form-group">
+        <label for="slope">Slope of Peak Exercise ST Segment</label>
+        <select class="form-control" id="slope" name="slope" required>
+          <option value="0">Upsloping</option>
+          <option value="1">Flat</option>
+          <option value="2">Downsloping</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-success">Predict</button>
+    </form>
+  </div>
+</div>
+
+<br><br><br>
+
+{% endblock %}

@@ -1,0 +1,124 @@
+{% extends "disease_page.html" %}
+{% block page %}
+
+<style>
+/* Centered form box */
+.form-box {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 40px 50px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+/* Form spacing */
+.form-box .form-group {
+    margin-bottom: 20px;
+}
+
+/* Heading styling */
+.form-box h3 {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* Button styling */
+.form-box button {
+    margin-top: 30px;
+    padding: 10px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    width: 100%;
+}
+</style>
+
+<br><br><br>
+
+<div class="container">
+  <div class="form-box">
+    <h3>Stroke Disease Prediction</h3>
+
+    <form action="/predict" method="POST">
+
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input class="form-control" type="number" min="0" required name="age" placeholder="Age">
+      </div>
+
+      <div class="form-group">
+        <label for="avg_glucose_level">What's your Average Glucose Level?</label>
+        <input class="form-control" type="number" min="0" step="any" id="avg_glucose_level" name="avg_glucose_level" required placeholder="Average Glucose Level">
+      </div>
+
+      <div class="form-group">
+        <label for="hypertension">Do you have Hypertension?</label>
+        <select class="form-control" id="hypertension" name="hypertension" required>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="heart_disease">Do you suffer from Heart Disease?</label>
+        <select class="form-control" id="heart_disease" name="heart_disease" required>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <select class="form-control" id="Gender" name="Gender" required>
+          <option value="1">Male</option>
+          <option value="0">Female</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="ever_married">Are you married or have been married before?</label>
+        <select class="form-control" id="ever_married" name="ever_married" required>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="work_type">What's your Work Type?</label>
+        <select class="form-control" id="work_type" name="work_type" required>
+          <option value="0">Private</option>
+          <option value="1">Self-employed</option>
+          <option value="2">Government job</option>
+          <option value="3">Taking care of children</option>
+          <option value="4">Never worked</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="Residence_type">Residence Type</label>
+        <select class="form-control" id="Residence_type" name="Residence_type" required>
+          <option value="1">Urban</option>
+          <option value="0">Rural</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="Smoking_status">Do you smoke?</label>
+        <select class="form-control" id="Smoking_status" name="Smoking_status" required>
+          <option value="0">Never smoked</option>
+          <option value="1">Sometimes</option>
+          <option value="2">Formerly smoked</option>
+          <option value="3">Smokes</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-success">Predict</button>
+
+    </form>
+  </div>
+</div>
+
+<br><br><br>
+
+{% endblock %}

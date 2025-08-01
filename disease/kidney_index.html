@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kidney Disease Information</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+  <style>
+	/* Make text justified */
+	#disease_page .col-md-6 p, 
+	#disease_page .col-md-6 ul, 
+	#disease_page .col-md-6 li {
+		text-align: justify;
+	}
+	
+	/* Control image size and keep it centered */
+	#disease_page .ill_image {
+		width: 70%; /* change this percentage to make smaller or bigger */
+		max-width: 300px; /* prevent it from becoming too large */
+		height: auto;
+		object-fit: contain;
+		display: block;
+		margin: 100px; /* center inside the column */
+	}
+	
+	/* Center image inside column */
+	.text-center-img {
+		text-align: center;
+	}
+	</style>
+	
+</head>
+
+<body>
+
+<div id="disease_page">
+  <div class="container">
+    <div class="row">
+      <!-- Text Section -->
+      <div class="col-md-6 col-sm-6 wow fadeInLeft" data-wow-delay="0.5s">
+        <h3>Kidney disease</h3>
+        <h4>Overview</h4>
+        <p>Chronic kidney disease (CKD), also referred to as chronic kidney failure, describes the gradual and progressive decline in kidney function. The kidneys are vital organs responsible for filtering waste products and excess fluids from the bloodstream, which are then excreted through urine. In advanced stages of CKD, harmful levels of fluid, electrolytes, and waste substances accumulate in the body, leading to significant health complications.
+			In its early stages, CKD is often asymptomatic, with noticeable symptoms usually appearing only after substantial loss of kidney function. Effective management focuses on slowing the progression of kidney damage by addressing the underlying causes, such as diabetes or hypertension. If untreated, CKD can progress to end-stage kidney failure, a life-threatening condition requiring either artificial filtration (dialysis) or a kidney transplant to sustain life.
+		
+      </div>
+
+      <!-- Image Section -->
+      <div class="col-md-6 col-sm-6 wow fadeInRight text-center-img" data-wow-delay="0.5s">
+        <img class="ill_image" src="./images/kindey.jpg">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay="0.5s">
+        <h4>Symptoms</h4>
+		<p>Signs and symptoms of chronic kidney disease develop over time if kidney damage progresses slowly and may include:</p>
+		<ul>
+			<li><b>Nausea and Vomiting: </b> Digestive discomfort and episodes of vomiting.</li><li><b>Loss of appetite: </b> A reduced desire or inability to eat.</li><li><b>Urinary changes: </b> Variations in the frequency and quantity of urination.</li><li><b>Hypertension: </b> Elevated blood pressure levels that are difficult to manage.</li><li><b>Cognitive decline: </b> Reduced mental sharpness or clarity.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <!-- Model Information -->
+      <div class="col-md-6 col-sm-6 wow fadeInRight" style="display: inline-block;vertical-align: middle;" data-wow-delay="0.5s">
+        <h3>Model</h3>
+        <p>To make the diagnosis :</p>
+        <ul>
+			<li>age: age of the patient</li><li>Blood Pressure: in mm/Hg</li><li>Urine Specific Gravity test result: between (1.002, 1.030)</li><li>Amount of Blood Glucose Random in mgs/dl</li><li>Amount of Blood Urea in mgs/dl</li><li> Amount of Serum Creatinine,in mgs/dl</li><li>Amount of Hemoglobin in gms</li><li>Pus Cell clumps: present,notpresent</li><li>Bacteria: present,notpresent</li><li>Hypertension: yes,no</li><li>Diabetes Mellitus: yes,no</li><li>Coronary Artery Disease: yes,no</li><li>Appetite: good,poor</li><li>Pedal Edema:yes,no</li><li>Anemia: yes,no</li>
+        </ul>
+      </div>
+
+      <!-- Accuracy Chart -->
+      <div class="col-md-6 col-sm-6 wow fadeInRight text-center" data-wow-delay="0.5s">
+        <div class="flex-wrapper">
+          <div class="single-chart">
+            <svg viewBox="0 0 36 36" class="circular-chart orange">
+              <path class="circle-bg"
+                d="M18 2.0845
+                  a 15.9155 15.9155 0 0 1 0 31.831
+                  a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              <path class="circle"
+                stroke-dasharray="86, 100"
+                d="M18 2.0845
+                  a 15.9155 15.9155 0 0 1 0 31.831
+                  a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              <text x="18" y="20.35" class="percentage">81%</text>
+            </svg>
+            <h4 style="text-align: center;">Accuracy</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br><br><br>
+
+  <!-- Predict Button -->
+  <div class="prediction text-center">
+    <a href="./kidney.html" class="smoothScroll btn btn-success wow fadeInDown" data-wow-delay="2000">Predict</a>
+  </div>
+
+  <br><br><br><br>
+</div>
+
+</body>
+</html>

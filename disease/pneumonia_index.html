@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pneumonia Information</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+  <style>
+	/* Make text justified */
+	#disease_page .col-md-6 p, 
+	#disease_page .col-md-6 ul, 
+	#disease_page .col-md-6 li {
+		text-align: justify;
+	}
+	
+	/* Control image size and keep it centered */
+	#disease_page .ill_image {
+		width: 70%; /* change this percentage to make smaller or bigger */
+		max-width: 300px; /* prevent it from becoming too large */
+		height: auto;
+		object-fit: contain;
+		display: block;
+		margin: 100px; /* center inside the column */
+	}
+	
+	/* Center image inside column */
+	.text-center-img {
+		text-align: center;
+	}
+	</style>
+	
+</head>
+
+<body>
+
+<div id="disease_page">
+  <div class="container">
+    <div class="row">
+      <!-- Text Section -->
+      <div class="col-md-6 col-sm-6 wow fadeInLeft" data-wow-delay="0.5s">
+        <h3>Pneumonia</h3>
+        <h4>Overview</h4>
+        <p>Pneumonia is a medical condition characterized by the inflammation of the air sacs (alveoli) in one or both lungs. This inflammation may lead to the accumulation of fluid or purulent material within the air sacs, resulting in symptoms such as a productive cough (phlegm or pus), fever, chills, and respiratory distress. The condition can be caused by various pathogens, including bacteria, viruses, and fungi.
+
+			The severity of pneumonia ranges from mild cases to life-threatening situations. It poses a higher risk to specific populations, including infants, young children, older adults (above 65 years), and individuals with pre-existing health conditions or compromised immune systems. Proper medical evaluation and timely treatment are essential to manage and mitigate the impact of this potentially serious condition.
+        </p>
+        <p>Praesent eu egestas ante, sed eleifend libero. Fusce id nisl vitae lectus posuere feugiat dictum ut purus. Pellentesque eget turpis odio. Suspendisse porttitor sapien eget sem hendrerit, at rutrum tellus accumsan.</p>
+      </div>
+
+      <!-- Image Section -->
+      <div class="col-md-6 col-sm-6 wow fadeInRight text-center-img" data-wow-delay="0.5s">
+        <img class="ill_image" src="./images/Pneumonia.jpg">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay="0.5s">
+        <h4>Symptoms</h4>
+        <p>If you or someone you're with may be having a Pneumonia, pay particular attention to the time the symptoms began. Some treatment options are most effective when given soon after a Pneumonia begins.
+        Signs and symptoms of Pneumonia include:</p>
+        <ul>
+          <li><b>Chest pain:
+		</b> Discomfort or pain when breathing or coughing.</li>
+          <li><b>Shortness of breath:
+		</b> Difficulty in breathing or feeling breathless.</li>
+          <li><b>Cognitive changes:
+		</b> Confusion or alterations in mental awareness, particularly in older adults (65 years and above).</li>
+          <li><b>Fever, sweating, and chills:
+		</b>Elevated body temperature accompanied by sweating and shaking chills. </li>
+          <li><b>Lower body temperature: 
+		</b>  Often observed in older adults or those with weakened immune systems.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <!-- Model Information -->
+      <div class="col-md-6 col-sm-6 wow fadeInRight" style="display: inline-block;vertical-align: middle;" data-wow-delay="0.5s">
+        <h3>Model</h3>
+        <p>To make the diagnosis :</p>
+        <ul>
+          <li> You need to enter or upload an X-ray image of your chest.</li>
+		  <li>The model returns NORMAL if there is no sign of pneumonia disease , and PNEUMONIA if it detects pneumonia disease symptoms.</li>
+        </ul>
+      </div>
+
+      <!-- Accuracy Chart -->
+      <div class="col-md-6 col-sm-6 wow fadeInRight text-center" data-wow-delay="0.5s">
+        <div class="flex-wrapper">
+          <div class="single-chart">
+            <svg viewBox="0 0 36 36" class="circular-chart orange">
+              <path class="circle-bg"
+                d="M18 2.0845
+                  a 15.9155 15.9155 0 0 1 0 31.831
+                  a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              <path class="circle"
+                stroke-dasharray="86, 100"
+                d="M18 2.0845
+                  a 15.9155 15.9155 0 0 1 0 31.831
+                  a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              <text x="18" y="20.35" class="percentage">81%</text>
+            </svg>
+            <h4 style="text-align: center;">Accuracy</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br><br><br>
+
+  <!-- Predict Button -->
+  <div class="prediction text-center">
+    <a href="./pneumonia.html" class="smoothScroll btn btn-success wow fadeInDown" data-wow-delay="2000">Predict</a>
+  </div>
+
+  <br><br><br><br>
+</div>
+
+</body>
+</html>

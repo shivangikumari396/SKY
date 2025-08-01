@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diabetes Information</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+  <style>
+	/* Make text justified */
+	#disease_page .col-md-6 p, 
+	#disease_page .col-md-6 ul, 
+	#disease_page .col-md-6 li {
+		text-align: justify;
+	}
+	
+	/* Control image size and keep it centered */
+	#disease_page .ill_image {
+		width: 70%; /* change this percentage to make smaller or bigger */
+		max-width: 300px; /* prevent it from becoming too large */
+		height: auto;
+		object-fit: contain;
+		display: block;
+		margin: 100px; /* center inside the column */
+	}
+	
+	/* Center image inside column */
+	.text-center-img {
+		text-align: center;
+	}
+	</style>
+	
+</head>
+
+<body>
+
+<div id="disease_page">
+  <div class="container">
+    <div class="row">
+      <!-- Text Section -->
+      <div class="col-md-6 col-sm-6 wow fadeInLeft" data-wow-delay="0.5s">
+        <h3>Diabetes </h3>
+        <h4>Overview</h4>
+        <p> Diabetes mellitus represents a group of conditions that affect the body's ability to regulate blood sugar (glucose) levels. Glucose is a crucial energy source for cells in muscles and tissues, and it serves as the primary fuel for brain activity. Depending on the type of diabetes, the underlying causes may differ. However, all forms of diabetes can result in excessive sugar levels in the bloodstream, potentially leading to severe health complications.
+			Chronic forms of diabetes include type 1 and type 2 diabetes, while potentially reversible conditions include prediabetes and gestational diabetes. Prediabetes is characterized by elevated blood sugar levels that are not high enough to be classified as diabetes and is often a precursor to type 2 diabetes unless preventive measures are implemented. Gestational diabetes occurs during pregnancy and typically resolves after delivery, though it may increase the risk of developing type 2 diabetes later in life.
+			
+        </p>
+       
+      </div>
+
+      <!-- Image Section -->
+      <div class="col-md-6 col-sm-6 wow fadeInRight text-center-img" data-wow-delay="0.5s">
+        <img class="ill_image" src="./images/diabetes.jpg">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay="0.5s">
+        <h4>Symptoms</h4>
+        <p>If you or someone you're with may be having a Diabetes, pay particular attention to the time the symptoms began. Some treatment options are most effective when given soon after a Diabetes begins.
+        Signs and symptoms of Diabetes include:</p>
+        <ul>
+			<li>Increased thirst and extreme hunger</li><li>Frequent urination</li><li>Unexplained weight loss</li><li>Presence of ketones in the urine (ketones are a byproduct of the breakdown of muscle and fat that happens when there's not enough available insulin)</li><li>Fatigue</li><li>Irritability</li><li>Blurred vision</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <!-- Model Information -->
+      <div class="col-md-6 col-sm-6 wow fadeInRight" style="display: inline-block;vertical-align: middle;" data-wow-delay="0.5s">
+        <h3>Model</h3>
+        <p>To make the diagnosis :</p>
+        <ul>
+			<li>Pregnancies: Number of times pregnant</li><li>Glucose: Plasma glucose concentration a 2 hours in an oral glucose tolerance test</li><li>BloodPressure: Diastolic blood pressure (mm Hg)</li><li>SkinThickness: Triceps skin fold thickness (mm)</li><li>Insulin: 2-Hour serum insulin (mu U/ml)</li><li>BMI: Body mass index (weight in kg/(height in m)^2)</li><li>Diabetes pedigree function: a function which scores likelihood of diabetes based on family history</li><li>Age (years)</li>
+        </ul>
+      </div>
+
+      <!-- Accuracy Chart -->
+      <div class="col-md-6 col-sm-6 wow fadeInRight text-center" data-wow-delay="0.5s">
+        <div class="flex-wrapper">
+          <div class="single-chart">
+            <svg viewBox="0 0 36 36" class="circular-chart orange">
+              <path class="circle-bg"
+                d="M18 2.0845
+                  a 15.9155 15.9155 0 0 1 0 31.831
+                  a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              <path class="circle"
+                stroke-dasharray="86, 100"
+                d="M18 2.0845
+                  a 15.9155 15.9155 0 0 1 0 31.831
+                  a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              <text x="18" y="20.35" class="percentage">81%</text>
+            </svg>
+            <h4 style="text-align: center;">Accuracy</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br><br><br>
+
+  <!-- Predict Button -->
+  <div class="prediction text-center">
+    <a href="./diabete.html" class="smoothScroll btn btn-success wow fadeInDown" data-wow-delay="2000">Predict</a>
+  </div>
+
+  <br><br><br><br>
+</div>
+
+</body>
+</html>

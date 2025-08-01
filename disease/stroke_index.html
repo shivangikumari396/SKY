@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stroke Information</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+  <style>
+	/* Make text justified */
+	#disease_page .col-md-6 p, 
+	#disease_page .col-md-6 ul, 
+	#disease_page .col-md-6 li {
+		text-align: justify;
+	}
+	
+	/* Control image size and keep it centered */
+	#disease_page .ill_image {
+		width: 70%; /* change this percentage to make smaller or bigger */
+		max-width: 300px; /* prevent it from becoming too large */
+		height: auto;
+		object-fit: contain;
+		display: block;
+		margin: 100px; /* center inside the column */
+	}
+	
+	/* Center image inside column */
+	.text-center-img {
+		text-align: center;
+	}
+	</style>
+	
+</head>
+
+<body>
+
+<div id="disease_page">
+  <div class="container">
+    <div class="row">
+      <!-- Text Section -->
+      <div class="col-md-6 col-sm-6 wow fadeInLeft" data-wow-delay="0.5s">
+        <h3>Stroke</h3>
+        <h4>Overview</h4>
+        <p>A stroke occurs when the blood supply to a part of the brain is interrupted or significantly reduced, depriving brain tissue of essential oxygen and nutrients. This leads to the rapid death of brain cells within minutes. Stroke is a critical medical emergency that requires immediate attention, as prompt treatment can minimize brain damage and other complications. Early intervention is key to reducing long-term impacts and improving outcomes.
+          Encouragingly, the mortality rate from strokes has significantly declined in recent years, particularly in the United States. Advancements in medical treatments and therapies have not only saved lives but also helped in preventing disabilities associated with strokes, offering hope for recovery and better quality of life.
+        </p>
+        <p>Praesent eu egestas ante, sed eleifend libero. Fusce id nisl vitae lectus posuere feugiat dictum ut purus. Pellentesque eget turpis odio. Suspendisse porttitor sapien eget sem hendrerit, at rutrum tellus accumsan.</p>
+      </div>
+
+      <!-- Image Section -->
+      <div class="col-md-6 col-sm-6 wow fadeInRight text-center-img" data-wow-delay="0.5s">
+        <img class="ill_image" src="./stroke.png">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay="0.5s">
+        <h4>Symptoms</h4>
+        <p>If you or someone you're with may be having a stroke, pay particular attention to the time the symptoms began. Some treatment options are most effective when given soon after a stroke begins.
+        Signs and symptoms of stroke include:</p>
+        <ul>
+          <li><b>Speech and Understanding Difficulties:</b> Trouble speaking or comprehending others, which may manifest as confusion, slurred speech, or difficulty processing language.</li>
+          <li><b>Paralysis or Numbness:</b> Sudden onset of numbness, weakness, or paralysis, typically affecting the face, arm, or leg, often on one side of the body.</li>
+          <li><b>Vision Problems:</b> Sudden blurred, blackened, or double vision in one or both eyes.</li>
+          <li><b>Severe Headache:</b> Intense and sudden headache that may be accompanied by vomiting, dizziness, or altered consciousness, potentially signaling a stroke.</li>
+          <li><b>Balance and Coordination Issues:</b> Difficulty walking, loss of balance, sudden dizziness, or coordination problems.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <!-- Model Information -->
+      <div class="col-md-6 col-sm-6 wow fadeInRight" style="display: inline-block;vertical-align: middle;" data-wow-delay="0.5s">
+        <h3>Model</h3>
+        <p>To make the diagnosis you need to enter the following information:</p>
+        <ul>
+          <li>age: age of the patient</li>
+          <li>gender: Male, Female or Other</li>
+          <li>ever_married: No or Yes</li>
+          <li>work_type: children garde, Government job, Never_worked, Private, Self-employed</li>
+          <li>Residence_type: Rural or Urban</li>
+          <li>smoking_status: formerly smoked, never smoked, smokes, sometimes</li>
+          <li>hypertension: yes or no</li>
+          <li>heart_disease: yes or no</li>
+          <li>avg_glucose_level: average glucose level in blood</li>
+        </ul>
+      </div>
+
+      <!-- Accuracy Chart -->
+      <div class="col-md-6 col-sm-6 wow fadeInRight text-center" data-wow-delay="0.5s">
+        <div class="flex-wrapper">
+          <div class="single-chart">
+            <svg viewBox="0 0 36 36" class="circular-chart orange">
+              <path class="circle-bg"
+                d="M18 2.0845
+                  a 15.9155 15.9155 0 0 1 0 31.831
+                  a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              <path class="circle"
+                stroke-dasharray="86, 100"
+                d="M18 2.0845
+                  a 15.9155 15.9155 0 0 1 0 31.831
+                  a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              <text x="18" y="20.35" class="percentage">81%</text>
+            </svg>
+            <h4 style="text-align: center;">Accuracy</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br><br><br>
+
+  <!-- Predict Button -->
+  <div class="prediction text-center">
+    <a href="/stroke_form" class="smoothScroll btn btn-success wow fadeInDown" data-wow-delay="2000">Predict</a>
+  </div>
+
+  <br><br><br><br>
+</div>
+
+</body>
+</html>
